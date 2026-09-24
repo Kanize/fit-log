@@ -7,15 +7,15 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <section className="min-h-screen bg-[#090a0c] px-4 py-8 sm:px-6 lg:px-8">
-            <div className="container mx-auto ">
+        
+            <div className=" px-4 py-8 sm:px-6 lg:px-8 container mx-auto">
                 <div
                 className="
                     relative
                     overflow-hidden
                     rounded-[15px]
                     border border-[#282c32]
-                    bg-[#15171c]
+                    bg-[#090a0c]
                     px-6
                     py-10
                     sm:px-8
@@ -150,7 +150,7 @@ const Banner = () => {
                 </div>
                 </div>
             </div>
-            </section>
+           
     );
 };
 
