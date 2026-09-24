@@ -1,5 +1,7 @@
 
 
+import SavedPlanBtn from '@/components/Fit-Details-Button/SavedPlanBtn';
+import TodaysPlanBtn from '@/components/Fit-Details-Button/TodaysPlanBtn';
 import { IFitLog } from '@/components/Type/Fitlog.type';
 import Image from 'next/image';
 import React from 'react';
@@ -152,21 +154,9 @@ const FitLogDetails = async ({params}: IFitLogDetailsProps) => {
                     {/* ================= BUTTONS ================= */}
                     <div className="mt-7 flex flex-col gap-3 sm:flex-row">
 
-                    <button
-                        type="button"
-                        className="flex h-11 items-center justify-center gap-2 rounded-lg bg-[#C2F800] px-5 text-sm font-medium text-black transition hover:bg-[#d0ff32] sm:flex-1 lg:flex-none"
-                    >
-                        <CiCalendar size={18} />
-                        Add to today&apos;s plan
-                    </button>
+                        <TodaysPlanBtn  fitData={fitData}/>
 
-                    <button
-                        type="button"
-                        className="flex h-11 items-center justify-center gap-2 rounded-lg border border-[#3a3d46] px-5 text-sm text-gray-300 transition hover:border-[#C2F800] hover:text-[#C2F800] sm:flex-1 lg:flex-none"
-                    >
-                        <CiBookmark size={18} />
-                        Save for later
-                    </button>
+                        <SavedPlanBtn fitData={fitData}/>
 
                     </div>
 
