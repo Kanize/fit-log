@@ -5,7 +5,7 @@ import TodaysPlanBtn from '@/components/Fit-Details-Button/TodaysPlanBtn';
 import { IFitLog } from '@/components/Type/Fitlog.type';
 import Image from 'next/image';
 import React from 'react';
-import { CiBookmark, CiCalendar } from 'react-icons/ci';
+
 
 interface IFitLogDetailsProps{
     params: Promise <{

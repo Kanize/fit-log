@@ -27,6 +27,7 @@ export const FitLogContext= createContext({});
 const FitLogProvider = ({ children}: PropsWithChildren) => {
     const [todaysPlan, setTodaysPlan] = useState([]);
     const [savedPlan, setSavedPlan] = useState([]);
+    
 
 const [activeTab, setActiveTab] =useState<PlanTab>("today");
 
