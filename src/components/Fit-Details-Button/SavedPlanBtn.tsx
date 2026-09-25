@@ -1,7 +1,7 @@
 
 'use client'
 import React, { Dispatch, SetStateAction, useContext } from 'react';
-import { CiBookmark, CiCalendar } from 'react-icons/ci';
+import { CiBookmark} from 'react-icons/ci';
 import { IFitLog } from '../Type/Fitlog.type';
 import { FitLogContext } from '../context/FitLogContext';
 import { toast } from 'react-toastify';
@@ -16,8 +16,15 @@ const SavedPlanBtn = ({fitData}:{fitData:IFitLog}) => {
     const { savedPlan, setSavedPlan } = useContext(FitLogContext) as IFitProps;
 
     const handleSavedPlan= () => {
+        const isAlreadyAdded = savedPlan.some(
+            (savedFit) => savedFit.id === fitData.id
+            );
+        if (isAlreadyAdded) {
+            toast.error('Already selected!');
+            return;
+        }
         setSavedPlan([...savedPlan, fitData]);
-        toast.success(`your '${fitData.name}' save succesfully.`)
+        toast.success(`your '${fitData.name}' saved succesfully!`)
     }
 
     return (

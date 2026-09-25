@@ -7,11 +7,6 @@ import MenuButton from '../All-Links/menuButton';
 
 const Navbar = () => {
 
-    //     const links= <>
-    //     <li><Link href='/' className='rounded-full px-4 py-2 text-xs text-gray-400 transition hover:bg-base-200 hover:text-[#C2F800] active:bg-base-200 active:text-[#C2F800]'>Workouts</Link></li>
-    //     <li><Link href="/My-Plan" className='rounded-full px-4 py-2 text-xs text-gray-400 transition hover:bg-base-200 hover:text-[#C2F800] active:bg-base-200 active:text-[#C2F800]'>My Plan</Link></li>
-        
-    // </>
 
     return (
         <div className='bg-base-100 shadow-sm'>

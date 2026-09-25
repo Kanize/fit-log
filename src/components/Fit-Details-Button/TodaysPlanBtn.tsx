@@ -16,8 +16,15 @@ const TodaysPlanBtn = ({fitData}:{fitData:IFitLog}) => {
     const { todaysPlan, setTodaysPlan } = useContext(FitLogContext) as IFitProps;
 
     const handleTodaysPlan= () => {
+        const isAlreadyAdded = todaysPlan.some(
+            (fitData) => fitData.id === fitData.id
+        );
+        if (isAlreadyAdded) {
+            toast.error('Already selected!');
+            return;
+        }
         setTodaysPlan([...todaysPlan, fitData]);
-        toast.success(`your '${fitData.name}' succesfull.`)
+        toast.success(`'${fitData.name}' added successfully!`)
     }
 
     return (
