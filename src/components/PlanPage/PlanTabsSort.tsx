@@ -36,7 +36,8 @@ const PlanTabsSort = () => {
                 px-4
                 text-[10px]
                 font-medium
-                transition
+                transition 
+                cursor-pointer
                 ${
                 activeTab === "today"
                     ? "bg-[#252a32] text-white"
@@ -57,6 +58,7 @@ const PlanTabsSort = () => {
                 text-[10px]
                 font-medium
                 transition
+                cursor-pointer
                 ${
                 activeTab === "saved"
                     ? "bg-[#252a32] text-white"
@@ -87,7 +89,7 @@ const PlanTabsSort = () => {
                 text-[10px]
                 text-[#d5d8dd]
                 outline-none
-            "
+                cursor-pointer"
             >
             <option value="duration">Duration</option>
 

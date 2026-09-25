@@ -1,5 +1,6 @@
 import BannerImage from '@/assets/banner.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 
@@ -87,6 +88,7 @@ const Banner = () => {
 
                     {/* Button */}
                     <div className="mt-6">
+                        <Link href="/FitLogDetails">
                     <button
                         type="button"
                         className="
@@ -106,11 +108,12 @@ const Banner = () => {
                         duration-200
                         hover:bg-[#d4ff3d]
                         hover:shadow-[0_0_20px_rgba(198,255,0,0.15)]
-                        active:scale-[0.98]
+                        active:scale-[0.98] cursor-pointer
                         "
-                    >
+                        >
                         Browse Workouts
                     </button>
+                    </Link>
                     </div>
                 </div>
 

@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { FitLogContext, FitLogContextType } from "@/components/context/FitLogContext";
 import Link from "next/link";
+import { RxCross2 } from "react-icons/rx";
 
 const PlanDetailCard = () => {
     const context = useContext(FitLogContext);
@@ -52,11 +53,11 @@ const PlanDetailCard = () => {
             className="
                 mt-5
                 flex
-                min-h-[248px]
+                min-h-62
                 flex-col
                 items-center
                 justify-center
-                rounded-[12px]
+                rounded-xl
                 border
                 border-dashed
                 border-[#292e36]
@@ -77,7 +78,7 @@ const PlanDetailCard = () => {
             <p
             className="
                 mt-2
-                max-w-[330px]
+                max-w-82.5
                 text-[10px]
                 text-[#777e89]
                 sm:text-[11px]
@@ -97,7 +98,7 @@ const PlanDetailCard = () => {
                 text-[10px]
                 font-black
                 text-black
-                "
+                cursor-pointer"
                 >
                 Go to workouts
                 </button>
@@ -220,10 +221,11 @@ const PlanDetailCard = () => {
                     items-center
                     justify-center
                     text-[#646b76]
-                    hover:text-white"
+                    hover:text-white
+                    cursor-pointer"
                 onClick={()=>handleRemove(exercise.id)}
                 aria-label={`Remove ${exercise.name}`}>
-                ×
+                <RxCross2 />
                 </button>
             </div>
             </article>

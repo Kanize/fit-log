@@ -31,7 +31,7 @@ const TodaysPlanBtn = ({fitData}:{fitData:IFitLog}) => {
         <div>
             <button
                 type="button"
-                    className="flex h-11 items-center justify-center gap-2 rounded-lg bg-[#C2F800] px-5 text-sm font-medium text-black transition hover:bg-[#8bb308] sm:flex-1 lg:flex-none"
+                    className="flex h-11 items-center justify-center cursor-pointer gap-2 rounded-lg bg-[#C2F800] px-5 text-sm font-medium text-black transition hover:bg-[#8bb308] sm:flex-1 lg:flex-none"
                     onClick={()=>handleTodaysPlan()}>
                     <CiCalendar size={18} />
                     Add to today&apos;s plan

@@ -31,7 +31,7 @@ const SavedPlanBtn = ({fitData}:{fitData:IFitLog}) => {
         <div>
             <button
                 type="button"
-                    className="flex h-11 items-center justify-center gap-2 rounded-lg border border-[#3a3d46] px-5 text-sm text-gray-300 transition hover:border-[#C2F800] hover:text-[#C2F800] sm:flex-1 lg:flex-none"
+                    className="flex h-11 items-center cursor-pointer justify-center gap-2 rounded-lg border border-[#3a3d46] px-5 text-sm text-gray-300 transition hover:border-[#C2F800] hover:text-[#C2F800] sm:flex-1 lg:flex-none"
                     onClick={()=>handleSavedPlan()}>
                     <CiBookmark size={18} />
                     Save for later
