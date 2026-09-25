@@ -6,7 +6,7 @@ import { IFitLog } from '../Type/Fitlog.type';
 import { FitLogContext } from '../context/FitLogContext';
 import { toast } from 'react-toastify';
 
-interface IFitProps{
+export interface IFitProps{
     todaysPlan: IFitLog[], 
     setTodaysPlan: Dispatch<SetStateAction<IFitLog[]>>,
 }
