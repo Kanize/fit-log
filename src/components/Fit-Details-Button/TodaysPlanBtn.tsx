@@ -24,7 +24,7 @@ const TodaysPlanBtn = ({fitData}:{fitData:IFitLog}) => {
             return;
         }
         setTodaysPlan([...todaysPlan, fitData]);
-        toast.success(`'${fitData.name}' added successfully!`)
+        toast.success( "Added today's plan!")
     }
 
     return (

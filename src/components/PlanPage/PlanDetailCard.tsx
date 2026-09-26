@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FitLogContext, FitLogContextType } from "@/components/context/FitLogContext";
 import Link from "next/link";
 import { RxCross2 } from "react-icons/rx";
+import { toast } from "react-toastify";
 
 const PlanDetailCard = () => {
     const context = useContext(FitLogContext);
@@ -26,6 +27,11 @@ const PlanDetailCard = () => {
             prev.filter((exercise) => exercise.id !== exerciseId)
         );
     }
+};
+
+const handleMarkAsDone = (exercise: (typeof todaysPlan)[number]) => {
+    toast.success(`${exercise.name} marked as done!`);
+    handleRemove(exercise.id);
 };
 
     const currentPlan = activeTab === "today" ? todaysPlan : savedPlan;
@@ -199,6 +205,7 @@ const PlanDetailCard = () => {
 
                 <button
                 type="button"
+                onClick={() => handleMarkAsDone(exercise)}
                 className="
                     h-[31px]
                     rounded-full
@@ -207,7 +214,7 @@ const PlanDetailCard = () => {
                     text-[10px]
                     font-bold
                     text-black
-                "
+                cursor-pointer"
                 >
                 ✓ Mark as Done
                 </button>

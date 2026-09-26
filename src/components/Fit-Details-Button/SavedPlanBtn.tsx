@@ -24,7 +24,7 @@ const SavedPlanBtn = ({fitData}:{fitData:IFitLog}) => {
             return;
         }
         setSavedPlan([...savedPlan, fitData]);
-        toast.success(`your '${fitData.name}' saved succesfully!`)
+        toast.success("Added for later")
     }
 
     return (
