@@ -22,11 +22,11 @@ export interface FitLogContextType {
     setSortBy: React.Dispatch<React.SetStateAction<SortOption>>;
 }
 
-export const FitLogContext= createContext({});
+export const FitLogContext= createContext<FitLogContextType| null>(null);
 
 const FitLogProvider = ({ children}: PropsWithChildren) => {
-    const [todaysPlan, setTodaysPlan] = useState([]);
-    const [savedPlan, setSavedPlan] = useState([]);
+    const [todaysPlan, setTodaysPlan] = useState<IFitLog[]>([]);
+    const [savedPlan, setSavedPlan] = useState<IFitLog[]>([]);
     
 
 const [activeTab, setActiveTab] =useState<PlanTab>("today");

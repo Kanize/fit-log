@@ -5,26 +5,29 @@ import TodaysPlanBtn from '@/components/Fit-Details-Button/TodaysPlanBtn';
 import { IFitLog } from '@/components/Type/Fitlog.type';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import type { ReactElement } from 'react';
 
 
 
-interface IFitLogDetailsProps{
-    params: Promise <{
-        id:string;
-    }>;
+interface IFitLogDetailsParams {
+    id: string;
 }
 
-const getFits = async () =>{
-    const res = await fetch('https://api.abcz.workers.dev/api/fitlog');
-    const data = await res.json();
+interface IFitLogDetailsProps {
+    params: Promise<IFitLogDetailsParams>;
+}
+
+const getFits = async (): Promise<IFitLog[]> => {
+    const res: Response = await fetch('https://api.abcz.workers.dev/api/fitlog');
+    const data: IFitLog[] = await res.json();
     return data;
-}
+};
 
-const FitLogDetails = async ({params}: IFitLogDetailsProps) => {
-    const {id} = await params;
-    const fitsData = await getFits();
+const FitLogDetails = async ({ params }: IFitLogDetailsProps): Promise<ReactElement> => {
+    const { id }: IFitLogDetailsParams = await params;
+    const fitsData: IFitLog[] = await getFits();
 
-    const fitData = fitsData.find(
+    const fitData: IFitLog | undefined = fitsData.find(
         (fit: IFitLog) => String(fit.id) === String(id)
     );
 
