@@ -20,7 +20,7 @@ const FitLogLibrary = async () => {
                 <p className=" mt-2  text-[13px] font-normal leading-[1.55] text-[#8e939c] sm:text-[14px] text-center">
                     Twelve lifts covering every major muscle group.</p>
             </div>
-            <div className=' grid grid-cols-3 gap-4 my-6'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-6'>
                 {fitsData.map((fitData:IFitLog, index:number)=>{
                     return <FitLibraryCard key={index} fitData={fitData}/>
                 } )}

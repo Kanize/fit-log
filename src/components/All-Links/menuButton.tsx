@@ -34,7 +34,7 @@ const MenuButton = () => {
                 </span>
                 </Link>
 
-
+                {/* Save */}
                 <Link
                 href="/My-Plan "
                 onClick={()=> setActiveTab('saved')}
@@ -46,9 +46,6 @@ const MenuButton = () => {
                     {savedPlan.length}
                 </span>
                 </Link>
-
-
-
         </div>
     );
 };

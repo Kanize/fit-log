@@ -14,7 +14,7 @@ const FitLibraryCard = ({fitData}: { fitData: IFitLog }) => {
             <div className="overflow-hidden rounded-2xl border border-[#272930] bg-[#15161b] text-white">
                 
                 {/* Image */}
-                <div className="relative h-[220px] w-full overflow-hidden">
+                <div className="relative h-55 w-full overflow-hidden">
                 <Image
                     src={fitData.image}
                     alt={fitData.name}

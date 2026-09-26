@@ -4,7 +4,8 @@ import SavedPlanBtn from '@/components/Fit-Details-Button/SavedPlanBtn';
 import TodaysPlanBtn from '@/components/Fit-Details-Button/TodaysPlanBtn';
 import { IFitLog } from '@/components/Type/Fitlog.type';
 import Image from 'next/image';
-import React from 'react';
+import { notFound } from 'next/navigation';
+
 
 
 interface IFitLogDetailsProps{
@@ -21,10 +22,15 @@ const getFits = async () =>{
 
 const FitLogDetails = async ({params}: IFitLogDetailsProps) => {
     const {id} = await params;
-    const fitsData =await getFits()
+    const fitsData = await getFits();
+
     const fitData = fitsData.find(
-        (fit : IFitLog) => String (fit.id) === String (id)
-    ) as IFitLog;
+        (fit: IFitLog) => String(fit.id) === String(id)
+    );
+
+    if (!fitData) {
+        notFound();
+    }
 
     console.log(fitData , 'id');
     return (

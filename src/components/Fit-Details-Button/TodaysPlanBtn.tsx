@@ -17,7 +17,7 @@ const TodaysPlanBtn = ({fitData}:{fitData:IFitLog}) => {
 
     const handleTodaysPlan= () => {
         const isAlreadyAdded = todaysPlan.some(
-            (fitData) => fitData.id === fitData.id
+            (todaysFit) => todaysFit.id === fitData.id
         );
         if (isAlreadyAdded) {
             toast.error('Already selected!');
